@@ -1,0 +1,220 @@
+{
+  "project_name": "Golden Chariot Foodstuff Trading Co. LLC",
+  "archetype": "LUXURY_B2B_FOOD_COMMODITY",
+  "brand_personality": {
+    "attributes": [
+      "Premium Metallic & Champagne Gold",
+      "Editorial Architectural Elegance",
+      "Dubai B2B International Authority",
+      "Trustworthy & Established",
+      "Rice-Focused Commodity Excellence"
+    ],
+    "anti_patterns": [
+      "Avoid bright generic colors, neon, or cheap SaaS blues (#7351B7, #1B93A4)",
+      "Avoid grocery store/supermarket discount flyer aesthetics",
+      "Avoid restaurant or food blog style cartoons",
+      "Avoid flat low-contrast text over unmasked hero images",
+      "Avoid center-aligning all sections or generic equal-card Bootstrap grids"
+    ]
+  },
+  "color_palette": {
+    "primary_gold": {
+      "metallic_gold": "#C5A059",
+      "rich_gold": "#D4AF37",
+      "champagne_gold": "#E6CA65",
+      "gold_light_accent": "#F3E5AB",
+      "gold_dark_border": "#9A7B38"
+    },
+    "supporting_neutrals": {
+      "warm_cream": "#FAF7F2",
+      "ivory_bg": "#FDFCF7",
+      "ebony_dark_brown": "#1C1611",
+      "deep_charcoal": "#120E0B",
+      "warm_stone_gray": "#8C827A",
+      "border_gold_subtle": "rgba(197, 160, 89, 0.25)"
+    },
+    "text_colors": {
+      "dark_heading": "#1C1611",
+      "dark_body": "#3A332C",
+      "light_heading": "#FAF7F2",
+      "light_body": "#D8CEB9",
+      "gold_caption": "#C5A059"
+    },
+    "gradients": {
+      "gold_shimmer": "linear-gradient(135deg, #E6CA65 0%, #C5A059 50%, #9A7B38 100%)",
+      "dark_overlay": "linear-gradient(180deg, rgba(28, 22, 17, 0.85) 0%, rgba(18, 14, 11, 0.95) 100%)",
+      "gold_border_glow": "linear-gradient(90deg, rgba(197,160,89,0) 0%, rgba(197,160,89,0.8) 50%, rgba(197,160,89,0) 100%)"
+    }
+  },
+  "typography": {
+    "google_fonts_import": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
+    "heading_font": "'Cormorant Garamond', serif",
+    "body_font": "'Plus Jakarta Sans', sans-serif",
+    "mono_font": "'JetBrains Mono', monospace",
+    "hierarchy": {
+      "hero_title": "text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-[1.08]",
+      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold tracking-tight leading-[1.15]",
+      "card_title": "text-xl sm:text-2xl font-serif font-semibold leading-snug",
+      "eyebrow_label": "text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.25em] text-[#C5A059]",
+      "body_large": "text-lg sm:text-xl font-sans font-normal leading-relaxed text-[#3A332C]",
+      "body_regular": "text-base font-sans font-normal leading-relaxed text-[#3A332C]",
+      "small_caption": "text-xs sm:text-sm font-sans text-[#8C827A]"
+    }
+  },
+  "spacing_and_borders": {
+    "section_padding": "py-20 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto",
+    "card_padding": "p-6 sm:p-8 lg:p-10",
+    "border_radius": {
+      "none": "rounded-none",
+      "sm": "rounded-sm (2px)",
+      "md": "rounded-md (6px) - DEFAULT FOR B2B CARDS",
+      "pill": "rounded-full (for primary CTAs and badges)"
+    },
+    "shadows": {
+      "gold_subtle": "0 10px 30px -10px rgba(197, 160, 89, 0.18)",
+      "card_hover": "0 20px 40px -15px rgba(28, 22, 17, 0.12), 0 0 1px 1px rgba(197, 160, 89, 0.3)",
+      "modal_backdrop": "backdrop-blur-md bg-[#120E0B]/80"
+    }
+  },
+  "image_urls": {
+    "hero_background": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "dubai_skyline": "https://images.unsplash.com/photo-1607414851776-f2fcc379fb48?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "rice_products": {
+      "basmati": "https://images.unsplash.com/photo-1686820740687-426a7b9b2043?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "non_basmati": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "parboiled": "https://images.unsplash.com/photo-1723475158232-819e29803f4d?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "broken": "https://images.unsplash.com/photo-1643622357625-c013987d90e7?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "quality_steps": {
+      "sourcing": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "quality_check": "https://images.unsplash.com/photo-1597765221336-1f65bb4c4fee?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "processing": "https://images.unsplash.com/photo-1748000970909-845f4aa144d2?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "packaging": "https://images.unsplash.com/photo-1669707040737-a6237bc0ae50?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "global_delivery": "https://images.unsplash.com/photo-1634638021403-70f46d19fc02?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "about_section": "https://images.unsplash.com/photo-1634638022845-1ab614a94128?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "cta_banner_bg": "https://images.unsplash.com/photo-1723475158232-819e29803f4d?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "section_by_section_instructions": [
+    {
+      "section_id": "top_bar_and_main_nav",
+      "description": "Two-level sticky header with dark ebony top bar and champagne glassmorphism main navigation.",
+      "components": [
+        "Slim top bar (bg-[#1C1611], text-xs, text-[#D8CEB9]): Location 'Dubai, UAE', Phone '+971 50 123 4567', Email 'info@goldenchariot.ae', Social icons (LinkedIn, Facebook, Instagram, YouTube) with gold hover.",
+        "Main Navbar (sticky top-0 z-50 backdrop-blur-xl bg-[#FAF7F2]/90 border-b border-[#C5A059]/20): Gold emblem logo left ('Golden Chariot Foodstuff Trading Co. LLC'), links (Home, About Us, Rice Products, Other Products, Quality, Global Presence, Contact Us), search icon + gold primary button 'Get a Quote' (opens enquiry modal).",
+        "Mobile view: Compact logo + gold hamburger drawer + fixed CTA button."
+      ]
+    },
+    {
+      "section_id": "kinetic_hero",
+      "description": "Full-width editorial hero section with high-contrast luxury rice photography, gold typography and dual CTAs.",
+      "components": [
+        "Background: Real high-resolution rice grain texture with radial dark brown/gold vignette gradient.",
+        "Eyebrow: 'PREMIUM RICE. GLOBAL REACH.' in gold mono uppercase with tracking-[0.3em].",
+        "Headline: Masked line-by-line staggered reveal using Framer Motion: 'Nourishing People, Building a Brighter Tomorrow'.",
+        "Subtext: 'Dubai-based global foodstuff trading enterprise specializing in premium Basmati, Non-Basmati, Parboiled, and Broken rice export across Middle East, Africa, Europe, and Asia.'",
+        "CTA buttons: 'Explore Our Rice' (solid gold pill button with subtle glow) + 'Contact Us' (gold outlined sleek button).",
+        "Stats badge on corner: 'Dubai HQ • 50+ Export Destinations'."
+      ]
+    },
+    {
+      "section_id": "trust_highlights",
+      "description": "4-column high-density gold line-icon highlight bar over warm cream background with subtle gold borders.",
+      "items": [
+        "1. Premium Quality - 100% Sorted & Aged Grain Excellence",
+        "2. Global Sourcing - Directly from Top Paddy Farms in India, Pakistan, Thailand",
+        "3. Reliable Supply - Guaranteed Bulk Shipping & On-Time Port Delivery",
+        "4. Trusted Partnership - Ethical B2B Trade & Customized Bulk Packaging"
+      ]
+    },
+    {
+      "section_id": "rice_products",
+      "description": "4-card Bento grid for core rice offerings + 'View All Rice Products' lead CTA.",
+      "cards": [
+        {"title": "Basmati Rice", "tag": "Long Grain / Aromatic", "desc": "Extra-long slender grain, fragrant aroma, ideal for luxury culinary standards.", "image": "basmati"},
+        {"title": "Non-Basmati Rice", "tag": "Sona Masoori / PR-11 / IR-64", "desc": "Versatile, high-nutritional value everyday grains for mass commercial supply.", "image": "non_basmati"},
+        {"title": "Parboiled Rice", "tag": "Golden & White Parboiled", "desc": "Hydro-thermally processed for maximum retention of natural nutrients and firmness.", "image": "parboiled"},
+        {"title": "Broken Rice", "tag": "100% & 5% Broken Grades", "desc": "Cost-effective food industry and starch production grade rice grains.", "image": "broken"}
+      ]
+    },
+    {
+      "section_id": "quality_process_timeline",
+      "description": "5-step visual horizontal/vertical step-by-step process with luxury gold numbering and laboratory images.",
+      "steps": [
+        "01. Sourcing - Directly selected from certified agricultural origins.",
+        "02. Quality Check - Multi-stage moisture, grain-length, and purity inspection.",
+        "03. Processing - State-of-the-art milling, de-husking, and color sorting.",
+        "04. Packaging - Food-grade moisture-proof PP, Jute, and Vacuum packs.",
+        "05. Global Delivery - Seamless logistics via Dubai maritime and air hubs."
+      ]
+    },
+    {
+      "section_id": "about_golden_chariot",
+      "description": "Editorial two-column story section with company heritage, Dubai hub image, and key differentiators.",
+      "highlights": [
+        "Customer Focused Solutions",
+        "Consistent Grain Quality",
+        "Reliable Global Supply Chain",
+        "Expanding Food Commodities Horizon"
+      ]
+    },
+    {
+      "section_id": "global_presence",
+      "description": "Interactive vector world map centered on Dubai hub showing trade corridors to Middle East, Africa, Europe, Asia.",
+      "features": [
+        "Animated golden glowing pulse on Dubai HQ location",
+        "Arc trade lines connecting Dubai to major international maritime trade ports",
+        "CTA button 'Our Global Presence →' opening detailed shipping routes modal or section"
+      ]
+    },
+    {
+      "section_id": "final_cta_banner",
+      "description": "Full-width immersive banner with rich gold overlay text and instant quote trigger button.",
+      "text": "Looking for Reliable Rice Supply for Your Market?",
+      "cta": "Contact Us Now → (Opens Quote Modal)"
+    },
+    {
+      "section_id": "footer",
+      "description": "Luxury dark ebony (#1C1611) footer with metallic gold logo, navigational columns, and newsletter signup.",
+      "columns": [
+        "Brand Column: Logo, Tagline 'Good Food. Brighter Lives.', Dubai UAE Address",
+        "Quick Links: Home, About Us, Quality, Global Presence, Contact",
+        "Our Products: Basmati, Non-Basmati, Parboiled, Broken Rice",
+        "Contact Info: Phone +971 50 123 4567, Email info@goldenchariot.ae",
+        "Newsletter: Clean email input + gold submit arrow button"
+      ]
+    },
+    {
+      "section_id": "quote_enquiry_modal",
+      "description": "Frontend-only interactive quote & inquiry modal with Shadcn/custom form controls and Sonner toast integration.",
+      "fields": [
+        "Name *",
+        "Company Name",
+        "Email *",
+        "Phone *",
+        "Product Interest * (Dropdown: Basmati / Non-Basmati / Parboiled / Broken / Other)",
+        "Required Quantity (Tons/Containers)",
+        "Destination Country / Port",
+        "Message *"
+      ],
+      "behavior": "Triggers 'Enquiry Sent Successfully! Our Dubai trading team will contact you within 24 hours.' via Sonner toast."
+    },
+    {
+      "section_id": "whatsapp_floating_button",
+      "description": "Fixed bottom-right (+971 50 123 4567) WhatsApp icon button with subtle pulse animation."
+    }
+  ],
+  "motion_specifications": {
+    "smooth_scrolling": "Lenis smooth scroll enabled globally",
+    "scroll_reveals": "Framer Motion initial opacity 0, y: 30, duration: 0.7s, staggerChildren: 0.15s",
+    "hover_effects": "Card hover scale-102 with border-color transition to #D4AF37",
+    "marquee": "Slow editorial marquee for product keywords with gap-24 and smooth linear motion"
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "All interactive and key informational elements MUST include a data-testid attribute in kebab-case format (e.g. data-testid='get-a-quote-button', data-testid='rice-product-card-basmati', data-testid='quote-modal-submit-button').",
+    "DO NOT use complete transparent backgrounds for sticky headers or dropdowns. Always use backdrop-blur with semi-opaque background color.",
+    "Ensure all buttons have explicit hover text color and focus rings.",
+    "Use strict grid layouts without nested grid motion wrapper breakages.",
+    "Do NOT use generic Inter font for headings - strictly use Cormorant Garamond for headings and Plus Jakarta Sans for body text."
+  ]
+}
