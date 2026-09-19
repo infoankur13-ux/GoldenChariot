@@ -41,6 +41,11 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Added restrained IntersectionObserver reveal motion with a fail-safe visible default, plus hero/review touch swipes, viewport-aware review dots, arrow disabled states, visibility-aware hero autoplay, and improved accessibility state handling.
 - QA: `/app/test_reports/iteration_2.json` verified imagery, icons, interactions, modal flows, static runtime, and responsive behavior across 1920/1440 desktop, 768 tablet, and 390/320 mobile. Its reveal timing defect was subsequently fixed and self-verified at 1920, 768, 390, and 320 widths with zero hidden content and zero horizontal overflow. JavaScript syntax, CSS structure, and all local assets also passed final checks.
 
+## Icon Rendering Bug Fix — 2026-09-19
+- Removed all external SVG sprite `<use>` references and deleted the obsolete `assets/icons.svg` dependency.
+- Embedded self-contained inline SVG geometry for all 41 interface icons while preserving the approved gold/currentColor styling, dimensions, alignment, and layout.
+- Targeted desktop/mobile regression verification passed in `/app/test_reports/iteration_3.json`: 41/41 icons contain inline geometry, with zero external sprite references, blank icons, zero-size visible icons, or icon-related console errors.
+
 ## Decisions and Current Limitations
 - **MOCKED:** Quote enquiries and newsletter submissions show local success notifications only; no data is stored or emailed.
 - **MOCKED:** Reviews, rating, customer names, and dates are labelled demo placeholders and are not real Google data.
