@@ -3,6 +3,7 @@ const $ = window.jQuery;
 
 $(function () {
   var $body = $("body");
+  var rootPath = String($body.data("root") || "../");
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var iconMarkup = {
     location: '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
@@ -42,6 +43,10 @@ $(function () {
     return '<svg class="ui-icon ' + (className || "") + '" viewBox="0 0 24 24" aria-hidden="true" focusable="false">' + (iconMarkup[name] || iconMarkup.sparkles) + "</svg>";
   }
 
+  function resolveSharedPaths(markup) {
+    return markup.replace(/(href|src)="\/(?!\/)/g, '$1="' + rootPath);
+  }
+
   function headerMarkup() {
     return '<div class="scroll-progress" data-testid="scroll-progress" aria-hidden="true"></div>' +
       '<div class="topbar" data-testid="top-contact-bar"><div class="container topbar-inner"><ul class="topbar-list"><li data-testid="top-bar-location">' + icon("location") + '<span>Dubai, United Arab Emirates</span></li><li><a href="tel:+971501234567" data-testid="top-bar-phone">' + icon("phone") + '<span>+971 50 123 4567</span></a></li><li><a href="mailto:info@goldenchariot.ae" data-testid="top-bar-email">' + icon("mail") + '<span>info@goldenchariot.ae</span></a></li></ul><ul class="social-list" aria-label="Social media"><li><button class="social-button" data-testid="social-linkedin" data-coming-soon aria-label="LinkedIn">' + icon("linkedin") + '</button></li><li><button class="social-button" data-testid="social-facebook" data-coming-soon aria-label="Facebook">' + icon("facebook") + '</button></li><li><button class="social-button" data-testid="social-instagram" data-coming-soon aria-label="Instagram">' + icon("instagram") + '</button></li></ul></div></div>' +
@@ -55,8 +60,12 @@ $(function () {
       '<a class="whatsapp" href="https://wa.me/971501234567?text=Hello%20Golden%20Chariot%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" data-testid="whatsapp-float" aria-label="Chat with Golden Chariot on WhatsApp">' + icon("whatsapp") + '</a><div id="site-toast" class="toast" role="status" aria-live="polite" data-testid="site-toast"></div>';
   }
 
-  $("[data-shared-header]").html(headerMarkup());
-  $("[data-shared-footer]").html(footerMarkup());
+  $("[data-shared-header]").html(resolveSharedPaths(headerMarkup()));
+  $("[data-shared-footer]").html(resolveSharedPaths(footerMarkup()));
+  $("main img[src^='/assets/'], link[href^='/assets/']").each(function () {
+    $(this).attr($(this).is("link") ? "href" : "src", rootPath + $(this).attr($(this).is("link") ? "href" : "src").slice(1));
+  });
+  $("main a[href^='/']").each(function () { $(this).attr("href", rootPath + $(this).attr("href").slice(1)); });
   $("[data-icon]").each(function () { $(this).html(icon($(this).data("icon"))); });
 
   var page = $body.data("page");
