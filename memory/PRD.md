@@ -9,8 +9,8 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Future food commodity and private-label customers.
 
 ## Current Architecture
-- **Frontend:** Traditional static site only — `/app/frontend/public/index.html`, `style.css`, and `script.js`.
-- **Client-side behavior:** jQuery 3.7.1 for the hero slider, review carousel, mobile menu, quote modal/forms, smooth section scrolling, and lightweight notifications.
+- **Frontend:** Traditional multi-page static site. The original homepage remains `/app/frontend/public/index.html` with `style.css` and `script.js`; seven inner routes use shared `/app/frontend/public/inner.css` and `inner.js`.
+- **Client-side behavior:** jQuery 3.7.1 for the homepage slider/carousel plus inner-page navigation, mobile drawer, quote/contact forms, catalogue filtering/search/load-more, reveal motion, and lightweight notifications.
 - **Assets:** Official untouched logo at `/app/frontend/public/assets/logo/golden-chariot-logo.png`; remote real-stock photography from Unsplash, Pexels, and Wikimedia.
 - **Serving:** `yarn start` runs `python3 -m http.server 3000 --directory public`; no React, Tailwind, TypeScript, or framework runtime is used.
 - **Backend:** Existing FastAPI/MongoDB template is untouched. No backend flow is required for the present website.
@@ -46,9 +46,19 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Embedded self-contained inline SVG geometry for all 41 interface icons while preserving the approved gold/currentColor styling, dimensions, alignment, and layout.
 - Targeted desktop/mobile regression verification passed in `/app/test_reports/iteration_3.json`: 41/41 icons contain inline geometry, with zero external sprite references, blank icons, zero-size visible icons, or icon-related console errors.
 
+## Seven Static Inner Pages — 2026-09-19
+- Created seven new screenshot-directed routes without modifying the existing homepage: `/about-us/`, `/quality/`, `/global-presence/`, `/contact-us/`, `/other-products/`, `/rice-products/`, and `/rice-products/1121-basmati-rice/`.
+- Added shared `inner.css` and `inner.js` design-system files that reproduce the homepage header, footer, inline SVG icons, quote modal, mobile drawer, toast notifications, and WhatsApp action while keeping the homepage isolated.
+- Implemented all requested page sections: About story/stats/journey/purpose/sourcing/commitment; quality workflow/testing/safety/storage/compliance; global map/regions/logistics/partner benefits; contact details/enquiry/location/support; emerging commodity categories; searchable/filterable rice catalogue; and detailed 1121 product information/specifications/packaging/applications/quality journey.
+- Added 17 locally hosted real-stock page assets for rice, commodity categories, quality inspection, warehouses, logistics and map visuals. Product packaging visuals are clearly illustrative mockups.
+- Added working route navigation, responsive category filters, product search, load-more behavior, the 1121 detail link, contact/quote form validation, and mobile navigation. All interactive and key informational elements include unique `data-testid` attributes.
+- Verification: `/app/test_reports/iteration_4.json` passed all seven routes, shared components, navigation, catalogue interactions, form flows, desktop/mobile responsiveness, image loading, and homepage isolation. A synthetic jump-scroll reveal edge case was subsequently hardened and self-verified across all seven routes at 390px with zero hidden sections or horizontal overflow.
+
 ## Decisions and Current Limitations
 - **MOCKED:** Quote enquiries and newsletter submissions show local success notifications only; no data is stored or emailed.
+- **MOCKED:** The new Contact enquiry form also shows a local success notification only; no data is stored or emailed.
 - **MOCKED:** Reviews, rating, customer names, and dates are labelled demo placeholders and are not real Google data.
+- **ILLUSTRATIVE:** Inner-page product specifications, commodity availability, packaging mockups, market descriptions, and compliance-document examples require client confirmation before publication as verified commercial claims.
 - Social links, search, legal pages, and future navigation destinations show a lightweight “being prepared” message.
 - The legacy `/app/frontend/src` files are retained only as historical reference and are not served or loaded by the site.
 - Preview infrastructure may emit intermittent Cloudflare challenge/RUM `net::ERR_ABORTED` entries during automated browser shutdown; all required website assets and user flows load successfully.
@@ -60,7 +70,6 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Replace review placeholders with client-approved verified Google review content or an approved feed.
 
 ### P1
-- Build static inner pages for About, Rice Products and individual product details, Quality, Global Presence, and Contact.
 - Add a full rice catalogue and approved product specifications.
 - Publish Private Label only when business confirms service availability and final terms.
 
@@ -68,7 +77,7 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Privacy Policy and Terms pages, approved map embed, trade insights/blog, Arabic locale, and approved customer case studies.
 
 ## Next Action Items
-1. Client visual review and approval of the professional finishing pass.
-2. Confirm a live quote-handling preference to replace the frontend-only demo submission.
-3. Supply verified reviews, social destinations, and any finalized contact details.
-4. Select the first inner page or catalogue scope for implementation.
+1. Client visual review of the seven screenshot-matched inner pages.
+2. Confirm live product specifications, market coverage, commodity availability, certification wording, office details, and packaging options.
+3. Confirm a live quote/contact handling preference to replace frontend-only demo submissions.
+4. Supply verified reviews and social destinations.

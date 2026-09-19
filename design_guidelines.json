@@ -1,269 +1,352 @@
 {
-  "project_overview": {
-    "title": "Golden Chariot Foodstuff Trading Co. LLC - UI/UX Refinement Guidelines",
-    "description": "Premium, modern, responsive B2B corporate website polish for Golden Chariot Foodstuff Trading Co. LLC, Dubai. Visual direction: Gold, Warm Cream, and Dark Brown palette.",
-    "architecture_stack": "Vanilla HTML5, CSS3, JavaScript/jQuery 3.7. NO React, Next.js, Tailwind, or complex build tools. Static site files located at /app/frontend/public/index.html, /app/frontend/public/style.css, /app/frontend/public/script.js.",
-    "primary_objective": "Execute a visual and frontend refinement pass without altering approved content structure or layout architecture. Enhance photography, icons, typography, spacing, transitions, and responsive polish."
+  "project_title": "Golden Chariot Foodstuff Trading Co. LLC — Design System & Multi-Page Implementation Blueprint",
+  "tech_stack": {
+    "framework": "Vanilla HTML5 + CSS3 + JavaScript + jQuery (jQuery 3.7+)",
+    "restricted": "No React, Next, Vue, Tailwind, or external frontend component frameworks",
+    "icon_system": "Inline SVG icon helper function via script.js (`iconMarkup` registry)"
   },
-  "color_palette": {
-    "brand_colors": {
-      "--gold": "#c5a059",
-      "--gold-rich": "#d4af37",
-      "--gold-light": "#e6ca65",
-      "--gold-dark": "#9a7b38"
+  "design_system": {
+    "color_palette": {
+      "primary_gold": "#c5a059",
+      "gold_rich": "#d4af37",
+      "gold_light": "#e6ca65",
+      "gold_dark": "#9a7b38",
+      "ivory_bg": "#fdfcf7",
+      "cream_bg": "#faf7f2",
+      "ebony_dark": "#1c1611",
+      "coal_dark": "#120e0b",
+      "stone_neutral": "#8c827a",
+      "text_main": "#3a332c",
+      "light_text": "#d8ceb9",
+      "border_line": "rgba(197,160,89,0.25)",
+      "shadow_ambient": "0 22px 48px -28px rgba(28,22,17,0.32)"
     },
-    "surface_colors": {
-      "--cream": "#faf7f2",
-      "--ivory": "#fdfcf7",
-      "--ebony": "#1c1611",
-      "--coal": "#120e0b",
-      "--stone": "#8c827a",
-      "--text": "#3a332c",
-      "--light-text": "#d8ceb9"
+    "typography": {
+      "font_family_heading": "'Cormorant Garamond', serif",
+      "font_family_body": "'Plus Jakarta Sans', sans-serif",
+      "font_family_mono": "'JetBrains Mono', monospace",
+      "font_weights": {
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "size_hierarchy": {
+        "h1": "clamp(3.25rem, 6.2vw, 5.55rem)",
+        "h2": "clamp(2.4rem, 5vw, 4.25rem)",
+        "h3": "24px - 28px",
+        "eyebrow": "10px (monospace, uppercase, tracking 0.28em)",
+        "body": "15px - 16px (line-height 1.68)"
+      }
     },
-    "decorations": {
-      "--line": "rgba(197, 160, 89, 0.25)",
-      "--shadow": "0 22px 48px -28px rgba(28, 22, 17, 0.32)",
-      "hero_gradient": "linear-gradient(90deg, rgba(253,252,247,0.98) 0%, rgba(250,247,242,0.91) 39%, rgba(250,247,242,0.43) 66%, rgba(28,22,17,0.14) 100%)"
+    "spacing_and_layout": {
+      "container_width": "min(100% - 40px, 1280px)",
+      "section_padding_desktop": "110px 0 to 120px 0",
+      "section_padding_tablet": "78px 0 to 88px 0",
+      "section_padding_mobile": "74px 0",
+      "border_radius": {
+        "sm": "4px",
+        "md": "6px",
+        "pill": "999px",
+        "hero_frame": "220px 220px 12px 12px"
+      }
+    },
+    "shared_components": {
+      "topbar": "Black bar (#1c1611) with Dubai location, phone, email, and social icons",
+      "header": "Sticky glass header with logo, desktop navigation links, Get a Quote CTA button, mobile hamburger toggle",
+      "footer": "Dark footer (#120e0b) with brand story, quick links, products list, contact details, newsletter form, copyright and legal links",
+      "quote_modal": "Fixed overlay modal (#quote-modal) with enquiry form, product dropdown selection, data-testid attributes",
+      "whatsapp_float": "Fixed bottom-right WhatsApp button with pulsing ring effect linking to wa.me",
+      "toast_notification": "Fixed top toast (#site-toast) for interactive submission feedback"
     }
   },
-  "typography": {
-    "font_families": {
-      "display_heading": "'Cormorant Garamond', Georgia, serif",
-      "body_text": "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
-      "labels_and_mono": "'JetBrains Mono', monospace"
+  "reference_mappings_and_pages": {
+    "page_1_detail": {
+      "name": "1121 Basmati Rice Product Detail",
+      "url": "/rice-products/1121-basmati-rice",
+      "screenshot_ref": "Screenshot 1",
+      "sections": [
+        {
+          "name": "Breadcrumb & Page Hero",
+          "layout": "Light cream background, eyebrow 'RICE PRODUCTS / BASMATI RICE', title '1121 Extra Long Grain Basmati Rice', lead description, high-res grain showcase image card with gold border tag 'Premium Export Grade'"
+        },
+        {
+          "name": "Product Specifications Table & Overview",
+          "layout": "Two-column split: left column detailed spec table (Grain Length 8.35mm+, Moisture max 12.5%, Purity 95%, Admixture 5%, Broken 1% max, Processing Steam/Parboiled/Raw, Origin India/Pakistan), right column product narrative and key features list"
+        },
+        {
+          "name": "Key Benefits & Cooking Characteristics",
+          "layout": "4-card grid with gold icons: Fluffy Non-Sticky Texture, Exceptional Aroma, 2x Elongation on Cooking, High Nutritional Value"
+        },
+        {
+          "name": "Applications & Culinary Uses",
+          "layout": "Grid of culinary use cases: Biryani Special, Gourmet Catering, Fine Dining & Commercial Kitchens, Retail Consumer Packs"
+        },
+        {
+          "name": "Packaging Options & Logistics",
+          "layout": "Feature cards highlighting packaging types: 5kg/10kg/20kg/25kg/50kg Non-Woven, PP, Jute & Poly Bags, Private Label Branding, 20ft Container Load capacity"
+        },
+        {
+          "name": "Quality Assurance & Grain Journey",
+          "layout": "5-step quality workflow badges specifically for 1121 Basmati batch testing and inspection"
+        },
+        {
+          "name": "Related Rice Products",
+          "layout": "4-card product carousel/grid linking to 1401 Steam Basmati, Pusa Basmati, Golden Parboiled Rice, and Sharbati Rice"
+        },
+        {
+          "name": "Get Custom Quote Banner",
+          "layout": "Full width dark CTA banner with direct 'Request Wholesale Quotation' button triggering quote modal"
+        }
+      ]
     },
-    "type_scale": {
-      "h1_hero": "clamp(3.25rem, 6.2vw, 5.55rem), weight: 600, line-height: 1.07",
-      "h2_section": "clamp(2.4rem, 5vw, 4.25rem), weight: 600, line-height: 1.07",
-      "h3_card": "21px to 25px, weight: 600",
-      "eyebrow_label": "10px, weight: 500, letter-spacing: 0.28em, uppercase",
-      "body_copy": "15px (1.02rem to 1.03rem), line-height: 1.6"
+    "page_2_about": {
+      "name": "About Us",
+      "url": "/about-us",
+      "screenshot_ref": "Screenshot 2",
+      "sections": [
+        {
+          "name": "About Hero & Company Essence",
+          "layout": "Hero layout with headline 'Rooted in Quality, Driven by Excellence', Dubai HQ imagery with pin overlay, company history overview"
+        },
+        {
+          "name": "Key Performance Metrics & Stats Bar",
+          "layout": "4-column counter/stat bar: 25+ Export Destinations, 100K+ Metric Tons Annual Volume, 100% Quality Inspected, 15+ Years Combined Industry Expertise"
+        },
+        {
+          "name": "Our Journey & Milestones Timeline",
+          "layout": "Horizontal or vertical interactive timeline showing key company milestones from establishment in Dubai to global expansion"
+        },
+        {
+          "name": "Vision, Mission & Core Values",
+          "layout": "3-column structured grid cards: Vision (To be the most trusted rice trader in the Middle East & Africa), Mission (Delivering pure, unadulterated food commodities), Values (Integrity, Quality, Speed, Partnerships)"
+        },
+        {
+          "name": "Strategic Dubai Sourcing & Global Hub",
+          "layout": "Split layout emphasizing Dubai's advantage as a logistics powerhouse connecting Asian agricultural hubs with Middle East, African, and European markets"
+        },
+        {
+          "name": "Our Commitment to Sustainability & Ethical Trading",
+          "layout": "Feature list covering responsible farm partnerships, eco-friendly packaging materials, and fair trade practices"
+        },
+        {
+          "name": "CTA Section",
+          "layout": "Golden harvest CTA banner encouraging global buyers to partner with Golden Chariot"
+        }
+      ]
+    },
+    "page_3_quality": {
+      "name": "Quality & Standards",
+      "url": "/quality",
+      "screenshot_ref": "Screenshot 3",
+      "sections": [
+        {
+          "name": "Quality Standards Hero",
+          "layout": "Dark theme hero 'Quality in Every Single Grain', highlighting rigorous inspection protocols and food safety compliance"
+        },
+        {
+          "name": "5-Step Quality Assurance Process",
+          "layout": "Interactive numbered step timeline: 01 Grain Sourcing -> 02 Lab Moisture & Purity Check -> 03 Modern Milling & Polishing -> 04 Hygienic Packaging -> 05 Vessel Container Inspection"
+        },
+        {
+          "name": "Laboratory & Testing Parameters",
+          "layout": "Specification grid detailing parameters tested: Average Grain Length (AGL), Moisture Content, Cooking Elongation Ratio, Broken Grain Percentage, Aroma Level, Foreign Matter Percentage"
+        },
+        {
+          "name": "Food Safety & Hygiene Standards",
+          "layout": "Cards outlining ISO standards, HACCP principles, Halal certification, and non-GMO guarantees"
+        },
+        {
+          "name": "Warehouse Storage & Transit Care",
+          "layout": "Logistics feature section on climate-controlled storage, pest management, and moisture barrier bag packaging"
+        },
+        {
+          "name": "Certifications & Compliance Badges",
+          "layout": "Grid of certification badges and quality stamps"
+        },
+        {
+          "name": "Quality Consultation CTA",
+          "layout": "Direct enquiry prompt for buyers requiring custom lab test reports or SGS/Intertek pre-shipment inspection"
+        }
+      ]
+    },
+    "page_4_global": {
+      "name": "Global Presence",
+      "url": "/global-presence",
+      "screenshot_ref": "Screenshot 4",
+      "sections": [
+        {
+          "name": "Global Trade Hero",
+          "layout": "Hero section 'Bridging Markets Across Continents', featuring interactive world trade map panel with Dubai HQ arc connections"
+        },
+        {
+          "name": "Key Export Regions & Market Reach",
+          "layout": "4-column region grid: Middle East (UAE, KSA, Oman, Qatar, Kuwait), Africa (Kenya, Tanzania, Mozambique, Ghana, Egypt), Europe & CIS, Asia & Far East"
+        },
+        {
+          "name": "Seamless Logistics & Supply Chain Journey",
+          "layout": "Visual logistics roadmap from farm origin to vessel loading, maritime shipping, port clearance, and customer warehouse delivery"
+        },
+        {
+          "name": "Why Partner With Us Globally",
+          "layout": "Feature cards: Multilingual Support, Flexible Shipping Terms (FOB, CIF, CFR), Competitive Port Access, Reliable Shipment Schedules"
+        },
+        {
+          "name": "Global Distribution Partners Map & Stats",
+          "layout": "Visual showcase of container port volume and destination network stats"
+        },
+        {
+          "name": "International Business Contact CTA",
+          "layout": "Dedicated call to action for import-export agents, distributors, and supermarket chains"
+        }
+      ]
+    },
+    "page_5_contact": {
+      "name": "Contact Us",
+      "url": "/contact-us",
+      "screenshot_ref": "Screenshot 5",
+      "sections": [
+        {
+          "name": "Contact Us Hero & Direct Reach",
+          "layout": "Eyebrow 'GET IN TOUCH', main title 'Let's Discuss Your Commodity Requirements', lead text with instant contact buttons"
+        },
+        {
+          "name": "Contact Information Cards & Office Visuals",
+          "layout": "3-card contact grid: 1) Dubai Office Address with location pin, 2) Direct Phone & WhatsApp contacts, 3) Email Enquiries (info@goldenchariot.ae & sales@goldenchariot.ae)"
+        },
+        {
+          "name": "Comprehensive Trade Enquiry Form",
+          "layout": "Enhanced full form with name, company, email, phone, product selection, estimated order volume, destination port, and detailed requirements input with full data-testid attributes"
+        },
+        {
+          "name": "Dubai HQ Map & Directions Visual",
+          "layout": "Location card and interactive/styled Google map container for Dubai Office location"
+        },
+        {
+          "name": "Direct WhatsApp & Instant Quote Guidance",
+          "layout": "Callout box highlighting 24/7 WhatsApp response for urgent commercial quotes"
+        }
+      ]
+    },
+    "page_6_other_products": {
+      "name": "Other Products",
+      "url": "/other-products",
+      "screenshot_ref": "Screenshot 6",
+      "sections": [
+        {
+          "name": "Expanding Commodity Portfolio Hero",
+          "layout": "Eyebrow 'FUTURE EXPANSION', title 'Diverse Agricultural Commodities for Global Markets', description outlining Golden Chariot's growing trade spectrum"
+        },
+        {
+          "name": "Commodity Categories Grid (with Coming Soon States)",
+          "layout": "Grid of upcoming product cards: Sugar & Refined Sugar, Spices & Spices Powder, Pulses & Lentils, Cooking Oil & Edible Oils, Wheat & Grains, Animal Feed Commodities — each with clear 'Coming Soon' badges and interest enquiry triggers"
+        },
+        {
+          "name": "Private Label & Customized Supply Solutions",
+          "layout": "Feature section on custom packaging, OEM branding, and consolidated container shipping for multi-commodity orders"
+        },
+        {
+          "name": "Supplier & Trade Partnership Invitation",
+          "layout": "Information card inviting agricultural producers and bulk suppliers to join Golden Chariot's global sourcing network"
+        },
+        {
+          "name": "Pre-Register / Early Enquiry CTA",
+          "layout": "Banner allowing buyers to express interest in upcoming commodity launches"
+        }
+      ]
+    },
+    "page_7_listing": {
+      "name": "Rice Products Listing",
+      "url": "/rice-products",
+      "screenshot_ref": "Screenshot 7",
+      "sections": [
+        {
+          "name": "Rice Catalogue Hero",
+          "layout": "Eyebrow 'COMPLETE CATALOGUE', headline 'Premium Basmati & Non-Basmati Rice Varieties', overview of available grades and packaging"
+        },
+        {
+          "name": "Interactive Category Filter & Search Bar",
+          "layout": "Filter tabs (All Rice, Basmati Rice, Non-Basmati Rice, Parboiled Rice, Broken Rice) and real-time search input box"
+        },
+        {
+          "name": "Product Grid Showcase",
+          "layout": "Comprehensive 8+ product card grid: 1121 Basmati Rice (linking to detail page), 1401 Steam Basmati Rice, Pusa Basmati Rice, Traditional Basmati Rice, Long Grain White Rice, Golden Parboiled Rice, IR64 Parboiled Rice, 100% Broken Rice — each card with image, spec tags, and detail button"
+        },
+        {
+          "name": "Custom Packaging & Private Label Support",
+          "layout": "Informational banner on custom bag printing and buyer specification matching"
+        },
+        {
+          "name": "Bulk Buying & Container Ordering Information",
+          "layout": "Grid explaining Minimum Order Quantities (MOQ: 1x20ft Container), payment terms (LC, TT), and shipping documentation (BL, Phytosanitary, Certificate of Origin)"
+        },
+        {
+          "name": "Catalogue Enquiry CTA",
+          "layout": "Full width dark CTA banner inviting custom price quotes"
+        }
+      ]
     }
   },
-  "image_assets": {
-    "hero_slider": [
-      {
-        "slide": 1,
-        "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85",
-        "alt": "Dubai skyline at golden hour"
-      },
-      {
-        "slide": 2,
-        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=2000&q=85",
-        "alt": "Premium Basmati rice grains close up"
-      },
-      {
-        "slide": 3,
-        "url": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?auto=format&fit=crop&w=2000&q=85",
-        "alt": "Golden harvest rice field in sunlight"
-      },
-      {
-        "slide": 4,
-        "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=2000&q=85",
-        "alt": "International container cargo port logistics"
-      }
-    ],
-    "hero_featured_frame": {
-      "url": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=1100&q=85",
-      "alt": "Premium white basmati rice in bowl"
-    },
-    "rice_products": [
-      {
-        "title": "Basmati Rice",
-        "url": "https://images.unsplash.com/photo-1686820740687-426a7b9b2043?auto=format&fit=crop&w=900&q=85",
-        "alt": "Premium long-grain Basmati rice"
-      },
-      {
-        "title": "Non-Basmati Rice",
-        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=85",
-        "alt": "High quality Non-Basmati rice grains"
-      },
-      {
-        "title": "Parboiled Rice",
-        "url": "https://images.pexels.com/photos/8108052/pexels-photo-8108052.jpeg?auto=compress&cs=tinysrgb&w=900",
-        "alt": "Nutritious golden parboiled rice"
-      },
-      {
-        "title": "Broken Rice",
-        "url": "https://images.unsplash.com/photo-1643622357625-c013987d90e7?auto=format&fit=crop&w=900&q=85",
-        "alt": "Quality broken rice for processing"
-      }
-    ],
-    "global_trade_gallery": [
-      {
-        "caption": "Warehouse operations",
-        "url": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Modern rice storage warehouse"
-      },
-      {
-        "caption": "Food commodities",
-        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=85",
-        "alt": "Quality rice food commodities"
-      },
-      {
-        "caption": "Global logistics",
-        "url": "https://images.pexels.com/photos/31244440/pexels-photo-31244440.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "alt": "Port container logistics cranes"
-      }
-    ],
-    "quality_process_steps": [
-      {
-        "step": "01 Sourcing",
-        "url": "https://images.pexels.com/photos/1217027/pexels-photo-1217027.jpeg?auto=compress&cs=tinysrgb&w=500",
-        "alt": "Hand holding mature rice grains"
-      },
-      {
-        "step": "02 Quality Check",
-        "url": "https://images.unsplash.com/photo-1613758235256-43a7bdc21d82?auto=format&fit=crop&w=500&q=80",
-        "alt": "Laboratory quality check"
-      },
-      {
-        "step": "03 Processing",
-        "url": "https://images.unsplash.com/photo-1710141530542-f792450e736e?auto=format&fit=crop&w=500&q=80",
-        "alt": "Hygienic grain sorting warehouse"
-      },
-      {
-        "step": "04 Packaging",
-        "url": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=500",
-        "alt": "Safe export packaging"
-      },
-      {
-        "step": "05 Global Delivery",
-        "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=500&q=80",
-        "alt": "International cargo container ship"
-      }
-    ],
-    "about_section_media": {
-      "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85",
-      "alt": "Dubai waterfront skyline HQ"
-    },
-    "private_label_media": {
-      "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=1200&q=85",
-      "alt": "Container shipping logistics"
-    },
-    "final_cta_background": {
-      "url": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?auto=format&fit=crop&w=2000&q=85",
-      "alt": "Golden grain field sunset"
+  "image_urls": {
+    "hero_dubai": "assets/images/hero-dubai.jpg",
+    "hero_harvest": "assets/images/hero-harvest.jpg",
+    "hero_logistics": "assets/images/hero-logistics.jpg",
+    "about_dubai": "assets/images/about-dubai.jpg",
+    "private_logistics": "assets/images/private-logistics.jpg",
+    "process_sourcing": "assets/images/process-sourcing.jpg",
+    "process_processing": "assets/images/process-processing.jpg",
+    "product_parboiled": "assets/images/product-parboiled.jpg",
+    "trade_warehouse": "assets/images/trade-warehouse.jpg",
+    "trade_logistics": "assets/images/trade-logistics.jpg",
+    "cta_harvest": "assets/images/cta-harvest.jpg",
+    "external_stock": {
+      "basmati_grains": "https://images.unsplash.com/photo-1686820740687-426a7b9b2043?auto=format&fit=crop&w=900&q=85",
+      "non_basmati": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=85",
+      "parboiled_rice": "https://images.unsplash.com/photo-1723475158232-819e29803f4d?auto=format&fit=crop&w=900&q=85",
+      "broken_rice": "https://images.unsplash.com/photo-1643622357625-c013987d90e7?auto=format&fit=crop&w=900&q=85",
+      "rice_field_sunlight": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85",
+      "rice_bowl": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=1100&q=85",
+      "shipping_containers": "https://images.pexels.com/photos/9694390/pexels-photo-9694390.jpeg?auto=compress&cs=tinysrgb&w=2000",
+      "world_map": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png"
     }
   },
-  "iconography_rules": {
-    "system": "Replace crude text characters with crisp inline SVG graphics or SVG symbol definitions.",
-    "icons_mapping": {
-      "location_pin": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/><circle cx='12' cy='10' r='3'/></svg>",
-      "phone": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>",
-      "email": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/><polyline points='22,6 12,13 2,6'/></svg>",
-      "arrow_right": "→",
-      "star": "★",
-      "menu_hamburger": "<svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><line x1='3' y1='12' x2='21' y2='12'/><line x1='3' y1='6' x2='21' y2='6'/><line x1='3' y1='18' x2='21' y2='18'/></svg>",
-      "close": "✕"
-    }
+  "testing_and_accessibility": {
+    "test_id_rule": "ALL interactive and key informational elements MUST include kebab-case data-testid attributes.",
+    "examples": [
+      "data-testid=\"nav-home\"",
+      "data-testid=\"nav-about\"",
+      "data-testid=\"nav-products\"",
+      "data-testid=\"nav-other-products\"",
+      "data-testid=\"nav-quality\"",
+      "data-testid=\"nav-global\"",
+      "data-testid=\"nav-contact\"",
+      "data-testid=\"quote-form-submit-button\"",
+      "data-testid=\"product-card-1121-basmati\""
+    ],
+    "contrast_standard": "WCAG AA / APCA standards. Light text on ebony background must maintain minimum 4.5:1 ratio.",
+    "motion_accessibility": "@media (prefers-reduced-motion: reduce) sets animation and transition durations to 0.01ms."
   },
-  "motion_and_interactions": {
-    "hero_slider": {
-      "interval_ms": 4500,
-      "transition": "opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1)",
-      "pause_on_hover": true
-    },
-    "scroll_reveal": {
-      "implementation": "IntersectionObserver in script.js adding .is-revealed class",
-      "styles": "opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease;"
-    },
-    "button_hover": "transform: translateY(-2px); box-shadow: 0 12px 26px -13px rgba(154,123,56,0.76)",
-    "card_hover": "transform: translateY(-7px); border-color: rgba(197,160,89,0.62); box-shadow: 0 22px 48px -28px rgba(28,22,17,0.32)"
-  },
-  "responsive_breakpoints": {
-    "desktop": "1150px and above: 4-column product grid, 5-column quality process steps, sticky topbar + header",
-    "tablet": "800px to 1150px: 2-column product grid, hide desktop nav links in favor of mobile drawer",
-    "mobile": "below 800px: single column hero layout, 1-column reviews carousel, bottom-sheet style enquiry modal"
-  },
-  "data_testid_inventory": [
-    "home-page",
-    "scroll-progress",
-    "top-contact-bar",
-    "top-bar-location",
-    "top-bar-phone",
-    "top-bar-email",
-    "site-header",
-    "desktop-brand-logo",
-    "nav-home",
-    "nav-about",
-    "nav-products",
-    "nav-other-products",
-    "nav-quality",
-    "nav-global",
-    "nav-contact",
-    "header-get-quote-button",
-    "mobile-menu-open",
-    "hero-section",
-    "hero-image-slider",
-    "hero-eyebrow",
-    "hero-headline",
-    "hero-subtext",
-    "hero-explore-rice-button",
-    "hero-contact-button",
-    "hero-rice-image",
-    "hero-circular-badge",
-    "hero-slider-dots",
-    "hero-slide-dot-1",
-    "hero-slide-dot-2",
-    "hero-slide-dot-3",
-    "hero-slide-dot-4",
-    "trust-highlights",
-    "trust-premium-quality",
-    "trust-global-sourcing",
-    "trust-reliable-supply",
-    "trust-trusted-partnership",
-    "editorial-marquee",
-    "rice-products-section",
-    "products-heading",
-    "view-all-products-button",
-    "rice-product-basmati",
-    "rice-product-non-basmati",
-    "rice-product-parboiled",
-    "rice-product-broken",
-    "global-trade-section",
-    "global-trade-gallery",
-    "quality-section",
-    "quality-heading",
-    "about-section",
-    "about-heading",
-    "customer-reviews-section",
-    "reviews-demo-notice",
-    "review-summary-rating",
-    "review-us-on-google-button",
-    "reviews-carousel",
-    "global-presence-section",
-    "global-heading",
-    "world-map-panel",
-    "dubai-hub-marker",
-    "private-label-section",
-    "final-cta-section",
-    "cta-contact-now-button",
-    "site-footer",
-    "footer-brand-logo",
-    "footer-tagline",
-    "footer-copyright",
-    "quote-modal-overlay",
-    "quote-modal",
-    "quote-form",
-    "quote-name-input",
-    "quote-company-input",
-    "quote-email-input",
-    "quote-phone-input",
-    "quote-product-select",
-    "quote-quantity-input",
-    "quote-destination-input",
-    "quote-message-input",
-    "quote-submit-button",
-    "whatsapp-float",
-    "site-toast"
-  ],
   "instructions_to_main_agent": [
-    "Maintain pure Vanilla HTML, CSS, and JS/jQuery structure in /app/frontend/public/.",
-    "Do NOT re-architect or delete existing section structures or HTML test IDs.",
-    "Ensure all high-resolution imagery links from image_assets are correctly used in index.html.",
-    "Ensure color contrast meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text).",
-    "Validate that modal overlays, hamburger menu, quote form, and toast popups function smoothly."
+    "DO NOT edit or alter /app/frontend/public/index.html or the home page structure in any way.",
+    "Ensure all 7 new pages inherit the exact topbar, site-header, site-footer, quote modal, whatsapp button, and toast notification scripts from index.html.",
+    "Maintain the exact font styling (Cormorant Garamond, Plus Jakarta Sans, JetBrains Mono) and CSS color variable system from style.css.",
+    "Ensure all buttons, links, and forms function smoothly via jQuery in script.js.",
+    "Add exact data-testid attributes to all new buttons, cards, forms, inputs, and navigation links.",
+    "Keep pages responsive across mobile (320px-500px), tablet (501px-800px), desktop (801px-1150px), and large screens (1151px+)."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "All interactive and key informational elements MUST include data-testid attribute to facilitate robust automated testing."
   ]
 }
