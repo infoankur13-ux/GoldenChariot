@@ -33,11 +33,20 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Replaced framework serving with a simple static server command; project package manifest contains no React or Tailwind dependencies.
 - Verification: Playwright frontend test report `/app/test_reports/iteration_1.json` passed at 100% (desktop/mobile, slider, modal validation/submit, carousel, responsive overflow, logo placement, WhatsApp). No blocking defects.
 
+## Professional UI/UX Finishing Pass — 2026-09-19
+- Preserved the approved section order, copy, palette, logo, and static HTML/CSS/jQuery architecture; no framework or page restructure was introduced.
+- Curated and localized 11 high-resolution real-stock assets for Dubai, rice cultivation, cargo shipping, warehousing, sourcing, processing, private-label logistics, and the final CTA. Added responsive image ratios, crop control, lazy loading, async decoding, and high-priority loading for the first hero image.
+- Replaced mixed text-glyph icons with a consistent custom SVG symbol library covering contact, navigation, trust, sourcing, process, benefit, social, carousel, modal, and WhatsApp controls.
+- Refined typography hierarchy, body readability, section rhythm, card alignment, shadows, border radii, focus states, premium hover feedback, hero crossfades, carousel easing, and mobile modal ergonomics.
+- Added restrained IntersectionObserver reveal motion with a fail-safe visible default, plus hero/review touch swipes, viewport-aware review dots, arrow disabled states, visibility-aware hero autoplay, and improved accessibility state handling.
+- QA: `/app/test_reports/iteration_2.json` verified imagery, icons, interactions, modal flows, static runtime, and responsive behavior across 1920/1440 desktop, 768 tablet, and 390/320 mobile. Its reveal timing defect was subsequently fixed and self-verified at 1920, 768, 390, and 320 widths with zero hidden content and zero horizontal overflow. JavaScript syntax, CSS structure, and all local assets also passed final checks.
+
 ## Decisions and Current Limitations
 - **MOCKED:** Quote enquiries and newsletter submissions show local success notifications only; no data is stored or emailed.
 - **MOCKED:** Reviews, rating, customer names, and dates are labelled demo placeholders and are not real Google data.
 - Social links, search, legal pages, and future navigation destinations show a lightweight “being prepared” message.
 - The legacy `/app/frontend/src` files are retained only as historical reference and are not served or loaded by the site.
+- Preview infrastructure may emit intermittent Cloudflare challenge/RUM `net::ERR_ABORTED` entries during automated browser shutdown; all required website assets and user flows load successfully.
 
 ## Prioritized Backlog
 ### P0
@@ -54,6 +63,7 @@ Build a premium, responsive corporate home page for Golden Chariot Foodstuff Tra
 - Privacy Policy and Terms pages, approved map embed, trade insights/blog, Arabic locale, and approved customer case studies.
 
 ## Next Action Items
-1. Client review of the static home page and confirmation of live quote-handling preference.
-2. Supply verified reviews, social destinations, and any finalized contact details.
-3. Select the first inner page or catalogue scope for implementation.
+1. Client visual review and approval of the professional finishing pass.
+2. Confirm a live quote-handling preference to replace the frontend-only demo submission.
+3. Supply verified reviews, social destinations, and any finalized contact details.
+4. Select the first inner page or catalogue scope for implementation.

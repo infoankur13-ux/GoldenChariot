@@ -1,220 +1,269 @@
 {
-  "project_name": "Golden Chariot Foodstuff Trading Co. LLC",
-  "archetype": "LUXURY_B2B_FOOD_COMMODITY",
-  "brand_personality": {
-    "attributes": [
-      "Premium Metallic & Champagne Gold",
-      "Editorial Architectural Elegance",
-      "Dubai B2B International Authority",
-      "Trustworthy & Established",
-      "Rice-Focused Commodity Excellence"
-    ],
-    "anti_patterns": [
-      "Avoid bright generic colors, neon, or cheap SaaS blues (#7351B7, #1B93A4)",
-      "Avoid grocery store/supermarket discount flyer aesthetics",
-      "Avoid restaurant or food blog style cartoons",
-      "Avoid flat low-contrast text over unmasked hero images",
-      "Avoid center-aligning all sections or generic equal-card Bootstrap grids"
-    ]
+  "project_overview": {
+    "title": "Golden Chariot Foodstuff Trading Co. LLC - UI/UX Refinement Guidelines",
+    "description": "Premium, modern, responsive B2B corporate website polish for Golden Chariot Foodstuff Trading Co. LLC, Dubai. Visual direction: Gold, Warm Cream, and Dark Brown palette.",
+    "architecture_stack": "Vanilla HTML5, CSS3, JavaScript/jQuery 3.7. NO React, Next.js, Tailwind, or complex build tools. Static site files located at /app/frontend/public/index.html, /app/frontend/public/style.css, /app/frontend/public/script.js.",
+    "primary_objective": "Execute a visual and frontend refinement pass without altering approved content structure or layout architecture. Enhance photography, icons, typography, spacing, transitions, and responsive polish."
   },
   "color_palette": {
-    "primary_gold": {
-      "metallic_gold": "#C5A059",
-      "rich_gold": "#D4AF37",
-      "champagne_gold": "#E6CA65",
-      "gold_light_accent": "#F3E5AB",
-      "gold_dark_border": "#9A7B38"
+    "brand_colors": {
+      "--gold": "#c5a059",
+      "--gold-rich": "#d4af37",
+      "--gold-light": "#e6ca65",
+      "--gold-dark": "#9a7b38"
     },
-    "supporting_neutrals": {
-      "warm_cream": "#FAF7F2",
-      "ivory_bg": "#FDFCF7",
-      "ebony_dark_brown": "#1C1611",
-      "deep_charcoal": "#120E0B",
-      "warm_stone_gray": "#8C827A",
-      "border_gold_subtle": "rgba(197, 160, 89, 0.25)"
+    "surface_colors": {
+      "--cream": "#faf7f2",
+      "--ivory": "#fdfcf7",
+      "--ebony": "#1c1611",
+      "--coal": "#120e0b",
+      "--stone": "#8c827a",
+      "--text": "#3a332c",
+      "--light-text": "#d8ceb9"
     },
-    "text_colors": {
-      "dark_heading": "#1C1611",
-      "dark_body": "#3A332C",
-      "light_heading": "#FAF7F2",
-      "light_body": "#D8CEB9",
-      "gold_caption": "#C5A059"
-    },
-    "gradients": {
-      "gold_shimmer": "linear-gradient(135deg, #E6CA65 0%, #C5A059 50%, #9A7B38 100%)",
-      "dark_overlay": "linear-gradient(180deg, rgba(28, 22, 17, 0.85) 0%, rgba(18, 14, 11, 0.95) 100%)",
-      "gold_border_glow": "linear-gradient(90deg, rgba(197,160,89,0) 0%, rgba(197,160,89,0.8) 50%, rgba(197,160,89,0) 100%)"
+    "decorations": {
+      "--line": "rgba(197, 160, 89, 0.25)",
+      "--shadow": "0 22px 48px -28px rgba(28, 22, 17, 0.32)",
+      "hero_gradient": "linear-gradient(90deg, rgba(253,252,247,0.98) 0%, rgba(250,247,242,0.91) 39%, rgba(250,247,242,0.43) 66%, rgba(28,22,17,0.14) 100%)"
     }
   },
   "typography": {
-    "google_fonts_import": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap",
-    "heading_font": "'Cormorant Garamond', serif",
-    "body_font": "'Plus Jakarta Sans', sans-serif",
-    "mono_font": "'JetBrains Mono', monospace",
-    "hierarchy": {
-      "hero_title": "text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight leading-[1.08]",
-      "section_title": "text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold tracking-tight leading-[1.15]",
-      "card_title": "text-xl sm:text-2xl font-serif font-semibold leading-snug",
-      "eyebrow_label": "text-xs sm:text-sm font-sans font-bold uppercase tracking-[0.25em] text-[#C5A059]",
-      "body_large": "text-lg sm:text-xl font-sans font-normal leading-relaxed text-[#3A332C]",
-      "body_regular": "text-base font-sans font-normal leading-relaxed text-[#3A332C]",
-      "small_caption": "text-xs sm:text-sm font-sans text-[#8C827A]"
+    "font_families": {
+      "display_heading": "'Cormorant Garamond', Georgia, serif",
+      "body_text": "'Plus Jakarta Sans', system-ui, -apple-system, sans-serif",
+      "labels_and_mono": "'JetBrains Mono', monospace"
+    },
+    "type_scale": {
+      "h1_hero": "clamp(3.25rem, 6.2vw, 5.55rem), weight: 600, line-height: 1.07",
+      "h2_section": "clamp(2.4rem, 5vw, 4.25rem), weight: 600, line-height: 1.07",
+      "h3_card": "21px to 25px, weight: 600",
+      "eyebrow_label": "10px, weight: 500, letter-spacing: 0.28em, uppercase",
+      "body_copy": "15px (1.02rem to 1.03rem), line-height: 1.6"
     }
   },
-  "spacing_and_borders": {
-    "section_padding": "py-20 lg:py-32 px-4 sm:px-8 lg:px-16 max-w-7xl mx-auto",
-    "card_padding": "p-6 sm:p-8 lg:p-10",
-    "border_radius": {
-      "none": "rounded-none",
-      "sm": "rounded-sm (2px)",
-      "md": "rounded-md (6px) - DEFAULT FOR B2B CARDS",
-      "pill": "rounded-full (for primary CTAs and badges)"
+  "image_assets": {
+    "hero_slider": [
+      {
+        "slide": 1,
+        "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2000&q=85",
+        "alt": "Dubai skyline at golden hour"
+      },
+      {
+        "slide": 2,
+        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=2000&q=85",
+        "alt": "Premium Basmati rice grains close up"
+      },
+      {
+        "slide": 3,
+        "url": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?auto=format&fit=crop&w=2000&q=85",
+        "alt": "Golden harvest rice field in sunlight"
+      },
+      {
+        "slide": 4,
+        "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=2000&q=85",
+        "alt": "International container cargo port logistics"
+      }
+    ],
+    "hero_featured_frame": {
+      "url": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=1100&q=85",
+      "alt": "Premium white basmati rice in bowl"
     },
-    "shadows": {
-      "gold_subtle": "0 10px 30px -10px rgba(197, 160, 89, 0.18)",
-      "card_hover": "0 20px 40px -15px rgba(28, 22, 17, 0.12), 0 0 1px 1px rgba(197, 160, 89, 0.3)",
-      "modal_backdrop": "backdrop-blur-md bg-[#120E0B]/80"
+    "rice_products": [
+      {
+        "title": "Basmati Rice",
+        "url": "https://images.unsplash.com/photo-1686820740687-426a7b9b2043?auto=format&fit=crop&w=900&q=85",
+        "alt": "Premium long-grain Basmati rice"
+      },
+      {
+        "title": "Non-Basmati Rice",
+        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=900&q=85",
+        "alt": "High quality Non-Basmati rice grains"
+      },
+      {
+        "title": "Parboiled Rice",
+        "url": "https://images.pexels.com/photos/8108052/pexels-photo-8108052.jpeg?auto=compress&cs=tinysrgb&w=900",
+        "alt": "Nutritious golden parboiled rice"
+      },
+      {
+        "title": "Broken Rice",
+        "url": "https://images.unsplash.com/photo-1643622357625-c013987d90e7?auto=format&fit=crop&w=900&q=85",
+        "alt": "Quality broken rice for processing"
+      }
+    ],
+    "global_trade_gallery": [
+      {
+        "caption": "Warehouse operations",
+        "url": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Modern rice storage warehouse"
+      },
+      {
+        "caption": "Food commodities",
+        "url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=800&q=85",
+        "alt": "Quality rice food commodities"
+      },
+      {
+        "caption": "Global logistics",
+        "url": "https://images.pexels.com/photos/31244440/pexels-photo-31244440.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "alt": "Port container logistics cranes"
+      }
+    ],
+    "quality_process_steps": [
+      {
+        "step": "01 Sourcing",
+        "url": "https://images.pexels.com/photos/1217027/pexels-photo-1217027.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "alt": "Hand holding mature rice grains"
+      },
+      {
+        "step": "02 Quality Check",
+        "url": "https://images.unsplash.com/photo-1613758235256-43a7bdc21d82?auto=format&fit=crop&w=500&q=80",
+        "alt": "Laboratory quality check"
+      },
+      {
+        "step": "03 Processing",
+        "url": "https://images.unsplash.com/photo-1710141530542-f792450e736e?auto=format&fit=crop&w=500&q=80",
+        "alt": "Hygienic grain sorting warehouse"
+      },
+      {
+        "step": "04 Packaging",
+        "url": "https://images.pexels.com/photos/4481326/pexels-photo-4481326.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "alt": "Safe export packaging"
+      },
+      {
+        "step": "05 Global Delivery",
+        "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=500&q=80",
+        "alt": "International cargo container ship"
+      }
+    ],
+    "about_section_media": {
+      "url": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Dubai waterfront skyline HQ"
+    },
+    "private_label_media": {
+      "url": "https://images.unsplash.com/photo-1670121180530-cfcba4438038?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Container shipping logistics"
+    },
+    "final_cta_background": {
+      "url": "https://images.unsplash.com/photo-1728895604559-a4e16081504e?auto=format&fit=crop&w=2000&q=85",
+      "alt": "Golden grain field sunset"
     }
   },
-  "image_urls": {
-    "hero_background": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
-    "dubai_skyline": "https://images.unsplash.com/photo-1607414851776-f2fcc379fb48?crop=entropy&cs=srgb&fm=jpg&q=85",
-    "rice_products": {
-      "basmati": "https://images.unsplash.com/photo-1686820740687-426a7b9b2043?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "non_basmati": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "parboiled": "https://images.unsplash.com/photo-1723475158232-819e29803f4d?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "broken": "https://images.unsplash.com/photo-1643622357625-c013987d90e7?crop=entropy&cs=srgb&fm=jpg&q=85"
-    },
-    "quality_steps": {
-      "sourcing": "https://images.unsplash.com/photo-1586201375761-83865001e31c?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "quality_check": "https://images.unsplash.com/photo-1597765221336-1f65bb4c4fee?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "processing": "https://images.unsplash.com/photo-1748000970909-845f4aa144d2?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "packaging": "https://images.unsplash.com/photo-1669707040737-a6237bc0ae50?crop=entropy&cs=srgb&fm=jpg&q=85",
-      "global_delivery": "https://images.unsplash.com/photo-1634638021403-70f46d19fc02?crop=entropy&cs=srgb&fm=jpg&q=85"
-    },
-    "about_section": "https://images.unsplash.com/photo-1634638022845-1ab614a94128?crop=entropy&cs=srgb&fm=jpg&q=85",
-    "cta_banner_bg": "https://images.unsplash.com/photo-1723475158232-819e29803f4d?crop=entropy&cs=srgb&fm=jpg&q=85"
-  },
-  "section_by_section_instructions": [
-    {
-      "section_id": "top_bar_and_main_nav",
-      "description": "Two-level sticky header with dark ebony top bar and champagne glassmorphism main navigation.",
-      "components": [
-        "Slim top bar (bg-[#1C1611], text-xs, text-[#D8CEB9]): Location 'Dubai, UAE', Phone '+971 50 123 4567', Email 'info@goldenchariot.ae', Social icons (LinkedIn, Facebook, Instagram, YouTube) with gold hover.",
-        "Main Navbar (sticky top-0 z-50 backdrop-blur-xl bg-[#FAF7F2]/90 border-b border-[#C5A059]/20): Gold emblem logo left ('Golden Chariot Foodstuff Trading Co. LLC'), links (Home, About Us, Rice Products, Other Products, Quality, Global Presence, Contact Us), search icon + gold primary button 'Get a Quote' (opens enquiry modal).",
-        "Mobile view: Compact logo + gold hamburger drawer + fixed CTA button."
-      ]
-    },
-    {
-      "section_id": "kinetic_hero",
-      "description": "Full-width editorial hero section with high-contrast luxury rice photography, gold typography and dual CTAs.",
-      "components": [
-        "Background: Real high-resolution rice grain texture with radial dark brown/gold vignette gradient.",
-        "Eyebrow: 'PREMIUM RICE. GLOBAL REACH.' in gold mono uppercase with tracking-[0.3em].",
-        "Headline: Masked line-by-line staggered reveal using Framer Motion: 'Nourishing People, Building a Brighter Tomorrow'.",
-        "Subtext: 'Dubai-based global foodstuff trading enterprise specializing in premium Basmati, Non-Basmati, Parboiled, and Broken rice export across Middle East, Africa, Europe, and Asia.'",
-        "CTA buttons: 'Explore Our Rice' (solid gold pill button with subtle glow) + 'Contact Us' (gold outlined sleek button).",
-        "Stats badge on corner: 'Dubai HQ • 50+ Export Destinations'."
-      ]
-    },
-    {
-      "section_id": "trust_highlights",
-      "description": "4-column high-density gold line-icon highlight bar over warm cream background with subtle gold borders.",
-      "items": [
-        "1. Premium Quality - 100% Sorted & Aged Grain Excellence",
-        "2. Global Sourcing - Directly from Top Paddy Farms in India, Pakistan, Thailand",
-        "3. Reliable Supply - Guaranteed Bulk Shipping & On-Time Port Delivery",
-        "4. Trusted Partnership - Ethical B2B Trade & Customized Bulk Packaging"
-      ]
-    },
-    {
-      "section_id": "rice_products",
-      "description": "4-card Bento grid for core rice offerings + 'View All Rice Products' lead CTA.",
-      "cards": [
-        {"title": "Basmati Rice", "tag": "Long Grain / Aromatic", "desc": "Extra-long slender grain, fragrant aroma, ideal for luxury culinary standards.", "image": "basmati"},
-        {"title": "Non-Basmati Rice", "tag": "Sona Masoori / PR-11 / IR-64", "desc": "Versatile, high-nutritional value everyday grains for mass commercial supply.", "image": "non_basmati"},
-        {"title": "Parboiled Rice", "tag": "Golden & White Parboiled", "desc": "Hydro-thermally processed for maximum retention of natural nutrients and firmness.", "image": "parboiled"},
-        {"title": "Broken Rice", "tag": "100% & 5% Broken Grades", "desc": "Cost-effective food industry and starch production grade rice grains.", "image": "broken"}
-      ]
-    },
-    {
-      "section_id": "quality_process_timeline",
-      "description": "5-step visual horizontal/vertical step-by-step process with luxury gold numbering and laboratory images.",
-      "steps": [
-        "01. Sourcing - Directly selected from certified agricultural origins.",
-        "02. Quality Check - Multi-stage moisture, grain-length, and purity inspection.",
-        "03. Processing - State-of-the-art milling, de-husking, and color sorting.",
-        "04. Packaging - Food-grade moisture-proof PP, Jute, and Vacuum packs.",
-        "05. Global Delivery - Seamless logistics via Dubai maritime and air hubs."
-      ]
-    },
-    {
-      "section_id": "about_golden_chariot",
-      "description": "Editorial two-column story section with company heritage, Dubai hub image, and key differentiators.",
-      "highlights": [
-        "Customer Focused Solutions",
-        "Consistent Grain Quality",
-        "Reliable Global Supply Chain",
-        "Expanding Food Commodities Horizon"
-      ]
-    },
-    {
-      "section_id": "global_presence",
-      "description": "Interactive vector world map centered on Dubai hub showing trade corridors to Middle East, Africa, Europe, Asia.",
-      "features": [
-        "Animated golden glowing pulse on Dubai HQ location",
-        "Arc trade lines connecting Dubai to major international maritime trade ports",
-        "CTA button 'Our Global Presence →' opening detailed shipping routes modal or section"
-      ]
-    },
-    {
-      "section_id": "final_cta_banner",
-      "description": "Full-width immersive banner with rich gold overlay text and instant quote trigger button.",
-      "text": "Looking for Reliable Rice Supply for Your Market?",
-      "cta": "Contact Us Now → (Opens Quote Modal)"
-    },
-    {
-      "section_id": "footer",
-      "description": "Luxury dark ebony (#1C1611) footer with metallic gold logo, navigational columns, and newsletter signup.",
-      "columns": [
-        "Brand Column: Logo, Tagline 'Good Food. Brighter Lives.', Dubai UAE Address",
-        "Quick Links: Home, About Us, Quality, Global Presence, Contact",
-        "Our Products: Basmati, Non-Basmati, Parboiled, Broken Rice",
-        "Contact Info: Phone +971 50 123 4567, Email info@goldenchariot.ae",
-        "Newsletter: Clean email input + gold submit arrow button"
-      ]
-    },
-    {
-      "section_id": "quote_enquiry_modal",
-      "description": "Frontend-only interactive quote & inquiry modal with Shadcn/custom form controls and Sonner toast integration.",
-      "fields": [
-        "Name *",
-        "Company Name",
-        "Email *",
-        "Phone *",
-        "Product Interest * (Dropdown: Basmati / Non-Basmati / Parboiled / Broken / Other)",
-        "Required Quantity (Tons/Containers)",
-        "Destination Country / Port",
-        "Message *"
-      ],
-      "behavior": "Triggers 'Enquiry Sent Successfully! Our Dubai trading team will contact you within 24 hours.' via Sonner toast."
-    },
-    {
-      "section_id": "whatsapp_floating_button",
-      "description": "Fixed bottom-right (+971 50 123 4567) WhatsApp icon button with subtle pulse animation."
+  "iconography_rules": {
+    "system": "Replace crude text characters with crisp inline SVG graphics or SVG symbol definitions.",
+    "icons_mapping": {
+      "location_pin": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'/><circle cx='12' cy='10' r='3'/></svg>",
+      "phone": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/></svg>",
+      "email": "<svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><path d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/><polyline points='22,6 12,13 2,6'/></svg>",
+      "arrow_right": "→",
+      "star": "★",
+      "menu_hamburger": "<svg width='22' height='22' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'><line x1='3' y1='12' x2='21' y2='12'/><line x1='3' y1='6' x2='21' y2='6'/><line x1='3' y1='18' x2='21' y2='18'/></svg>",
+      "close": "✕"
     }
+  },
+  "motion_and_interactions": {
+    "hero_slider": {
+      "interval_ms": 4500,
+      "transition": "opacity 1.15s cubic-bezier(0.4, 0, 0.2, 1)",
+      "pause_on_hover": true
+    },
+    "scroll_reveal": {
+      "implementation": "IntersectionObserver in script.js adding .is-revealed class",
+      "styles": "opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease;"
+    },
+    "button_hover": "transform: translateY(-2px); box-shadow: 0 12px 26px -13px rgba(154,123,56,0.76)",
+    "card_hover": "transform: translateY(-7px); border-color: rgba(197,160,89,0.62); box-shadow: 0 22px 48px -28px rgba(28,22,17,0.32)"
+  },
+  "responsive_breakpoints": {
+    "desktop": "1150px and above: 4-column product grid, 5-column quality process steps, sticky topbar + header",
+    "tablet": "800px to 1150px: 2-column product grid, hide desktop nav links in favor of mobile drawer",
+    "mobile": "below 800px: single column hero layout, 1-column reviews carousel, bottom-sheet style enquiry modal"
+  },
+  "data_testid_inventory": [
+    "home-page",
+    "scroll-progress",
+    "top-contact-bar",
+    "top-bar-location",
+    "top-bar-phone",
+    "top-bar-email",
+    "site-header",
+    "desktop-brand-logo",
+    "nav-home",
+    "nav-about",
+    "nav-products",
+    "nav-other-products",
+    "nav-quality",
+    "nav-global",
+    "nav-contact",
+    "header-get-quote-button",
+    "mobile-menu-open",
+    "hero-section",
+    "hero-image-slider",
+    "hero-eyebrow",
+    "hero-headline",
+    "hero-subtext",
+    "hero-explore-rice-button",
+    "hero-contact-button",
+    "hero-rice-image",
+    "hero-circular-badge",
+    "hero-slider-dots",
+    "hero-slide-dot-1",
+    "hero-slide-dot-2",
+    "hero-slide-dot-3",
+    "hero-slide-dot-4",
+    "trust-highlights",
+    "trust-premium-quality",
+    "trust-global-sourcing",
+    "trust-reliable-supply",
+    "trust-trusted-partnership",
+    "editorial-marquee",
+    "rice-products-section",
+    "products-heading",
+    "view-all-products-button",
+    "rice-product-basmati",
+    "rice-product-non-basmati",
+    "rice-product-parboiled",
+    "rice-product-broken",
+    "global-trade-section",
+    "global-trade-gallery",
+    "quality-section",
+    "quality-heading",
+    "about-section",
+    "about-heading",
+    "customer-reviews-section",
+    "reviews-demo-notice",
+    "review-summary-rating",
+    "review-us-on-google-button",
+    "reviews-carousel",
+    "global-presence-section",
+    "global-heading",
+    "world-map-panel",
+    "dubai-hub-marker",
+    "private-label-section",
+    "final-cta-section",
+    "cta-contact-now-button",
+    "site-footer",
+    "footer-brand-logo",
+    "footer-tagline",
+    "footer-copyright",
+    "quote-modal-overlay",
+    "quote-modal",
+    "quote-form",
+    "quote-name-input",
+    "quote-company-input",
+    "quote-email-input",
+    "quote-phone-input",
+    "quote-product-select",
+    "quote-quantity-input",
+    "quote-destination-input",
+    "quote-message-input",
+    "quote-submit-button",
+    "whatsapp-float",
+    "site-toast"
   ],
-  "motion_specifications": {
-    "smooth_scrolling": "Lenis smooth scroll enabled globally",
-    "scroll_reveals": "Framer Motion initial opacity 0, y: 30, duration: 0.7s, staggerChildren: 0.15s",
-    "hover_effects": "Card hover scale-102 with border-color transition to #D4AF37",
-    "marquee": "Slow editorial marquee for product keywords with gap-24 and smooth linear motion"
-  },
-  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
-    "All interactive and key informational elements MUST include a data-testid attribute in kebab-case format (e.g. data-testid='get-a-quote-button', data-testid='rice-product-card-basmati', data-testid='quote-modal-submit-button').",
-    "DO NOT use complete transparent backgrounds for sticky headers or dropdowns. Always use backdrop-blur with semi-opaque background color.",
-    "Ensure all buttons have explicit hover text color and focus rings.",
-    "Use strict grid layouts without nested grid motion wrapper breakages.",
-    "Do NOT use generic Inter font for headings - strictly use Cormorant Garamond for headings and Plus Jakarta Sans for body text."
+  "instructions_to_main_agent": [
+    "Maintain pure Vanilla HTML, CSS, and JS/jQuery structure in /app/frontend/public/.",
+    "Do NOT re-architect or delete existing section structures or HTML test IDs.",
+    "Ensure all high-resolution imagery links from image_assets are correctly used in index.html.",
+    "Ensure color contrast meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text).",
+    "Validate that modal overlays, hamburger menu, quote form, and toast popups function smoothly."
   ]
 }
